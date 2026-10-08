@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ร่วมจัดอันดับแบบโลโก้ EPIC โดยไม่ระบุตัวตน" />
+    <meta name="theme-color" content="#071b38" />
+    <title>โหวตโลโก้ EPIC</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23071b38'/%3E%3Cpath d='M12 34c7-13 13-18 20-18s13 5 20 18c-8 1-14 7-20 15-6-8-12-14-20-15Z' fill='%23f7ad21'/%3E%3Cpath d='M32 15v34' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="brand" href="#top" aria-label="หน้าหลักโหวตโลโก้ EPIC">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>
+          <strong>EPIC</strong>
+          <small>เลือกแบบโลโก้</small>
+        </span>
+      </a>
+      <div class="privacy-pill">
+        <span aria-hidden="true"></span>
+        ไม่ระบุตัวตน
+      </div>
+    </header>
+
+    <div id="preview-banner" class="preview-banner" hidden>
+      <strong>โหมดทดลองในเครื่อง</strong>
+      <span>ผลโหวตจะบันทึกเฉพาะในเบราว์เซอร์นี้ จนกว่าจะเชื่อมต่อกับชีตรับคำตอบ</span>
+    </div>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Excellent Pharmacy Practice in Cardiovascular Disease</p>
+        <h1 id="page-title">เลือกโลโก้ที่เหมาะที่สุดสำหรับ EPIC</h1>
+        <p class="intro-copy">พิจารณาแบบโลโก้ทั้ง 6 แบบ แล้วจัดอันดับ 3 แบบที่ชอบมากที่สุด พร้อมเขียนข้อเสนอแนะเพิ่มเติมได้ตามต้องการ</p>
+        <div class="step-row" aria-label="ขั้นตอนการลงคะแนน">
+          <span><b>1</b> ดูแบบโลโก้</span>
+          <span><b>2</b> จัดอันดับ 3 แบบ</span>
+          <span><b>3</b> ให้ข้อเสนอแนะ</span>
+        </div>
+      </section>
+
+      <form id="vote-form" novalidate>
+        <fieldset class="ballot">
+          <legend class="section-heading">
+            <span>แบบโลโก้ทั้ง 6</span>
+            <small>เลือกอันดับ 1, 2 และ 3</small>
+          </legend>
+
+          <div class="concept-grid">
+            <article class="concept-card" data-concept="แบบที่ 1">
+              <span class="image-stage wide"><img src="assets/concept-1.png" alt="แบบที่ 1 ตัวอักษร EPIC สีน้ำเงิน เจดีย์ดอยสุเทพ และเส้นชีพจรรูปภูเขา" /></span>
+              <div class="card-footer"><span><small>แบบที่</small><strong>01</strong></span><div class="rank-controls" aria-label="จัดอันดับแบบที่ 1"><button type="button" class="rank-button" data-rank="1">ที่ 1</button><button type="button" class="rank-button" data-rank="2">ที่ 2</button><button type="button" class="rank-button" data-rank="3">ที่ 3</button></div></div>
+              <div class="card-comment"><textarea id="comment-1" data-comment-index="1" rows="3" maxlength="500" aria-label="ข้อเสนอแนะสำหรับแบบที่ 1" placeholder="อยากให้ปรับอะไรเพิ่มเติม?"></textarea><span class="card-comment-count">0 / 500</span></div>
+            </article>
+
+            <article class="concept-card" data-concept="แบบที่ 2">
+              <span class="image-stage"><img src="assets/concept-2.png" alt="แบบที่ 2 กรอบรูปหัวใจสีสันสดใสและสัญลักษณ์ดอยสุเทพ" /></span>
+              <div class="card-footer"><span><small>แบบที่</small><strong>02</strong></span><div class="rank-controls" aria-label="จัดอันดับแบบที่ 2"><button type="button" class="rank-button" data-rank="1">ที่ 1</button><button type="button" class="rank-button" data-rank="2">ที่ 2</button><button type="button" class="rank-button" data-rank="3">ที่ 3</button></div></div>
+              <div class="card-comment"><textarea id="comment-2" data-comment-index="2" rows="3" maxlength="500" aria-label="ข้อเสนอแนะสำหรับแบบที่ 2" placeholder="อยากให้ปรับอะไรเพิ่มเติม?"></textarea><span class="card-comment-count">0 / 500</span></div>
+            </article>
+
+            <article class="concept-card" data-concept="แบบที่ 3">
+              <span class="image-stage"><img src="assets/concept-3.png" alt="แบบที่ 3 หัวใจทรงเรขาคณิตสีคอรัลและสีเขียวอมฟ้า พร้อมเครือข่ายเชื่อมต่อ" /></span>
+              <div class="card-footer"><span><small>แบบที่</small><strong>03</strong></span><div class="rank-controls" aria-label="จัดอันดับแบบที่ 3"><button type="button" class="rank-button" data-rank="1">ที่ 1</button><button type="button" class="rank-button" data-rank="2">ที่ 2</button><button type="button" class="rank-button" data-rank="3">ที่ 3</button></div></div>
+              <div class="card-comment"><textarea id="comment-3" data-comment-index="3" rows="3" maxlength="500" aria-label="ข้อเสนอแนะสำหรับแบบที่ 3" placeholder="อยากให้ปรับอะไรเพิ่มเติม?"></textarea><span class="card-comment-count">0 / 500</span></div>
+            </article>
+
+            <article class="concept-card" data-concept="แบบที่ 4">
+              <span class="image-stage"><img src="assets/concept-4.png" alt="แบบที่ 4 สัญลักษณ์ล้านนาและริบบิ้นเส้นชีพจรเป็นรูปหัวใจ" /></span>
+              <div class="card-footer"><span><small>แบบที่</small><strong>04</strong></span><div class="rank-controls" aria-label="จัดอันดับแบบที่ 4"><button type="button" class="rank-button" data-rank="1">ที่ 1</button><button type="button" class="rank-button" data-rank="2">ที่ 2</button><button type="button" class="rank-button" data-rank="3">ที่ 3</button></div></div>
+              <div class="card-comment"><textarea id="comment-4" data-comment-index="4" rows="3" maxlength="500" aria-label="ข้อเสนอแนะสำหรับแบบที่ 4" placeholder="อยากให้ปรับอะไรเพิ่มเติม?"></textarea><span class="card-comment-count">0 / 500</span></div>
+            </article>
+
+            <article class="concept-card board-card" data-concept="แบบที่ 5">
+              <span class="image-stage"><img src="assets/concept-5.jpg" alt="แบบที่ 5 ชุดแนวคิดโลโก้ 10 แบบที่ได้รับแรงบันดาลใจจากโคมล้านนา" /></span>
+              <div class="card-footer"><span><small>ชุดแนวคิด</small><strong>05</strong></span><div class="rank-controls" aria-label="จัดอันดับแบบที่ 5"><button type="button" class="rank-button" data-rank="1">ที่ 1</button><button type="button" class="rank-button" data-rank="2">ที่ 2</button><button type="button" class="rank-button" data-rank="3">ที่ 3</button></div></div>
+              <div class="card-comment"><textarea id="comment-5" data-comment-index="5" rows="3" maxlength="500" aria-label="ข้อเสนอแนะสำหรับแบบที่ 5" placeholder="อยากให้ปรับอะไรเพิ่มเติม?"></textarea><span class="card-comment-count">0 / 500</span></div>
+            </article>
+
+            <article class="concept-card board-card" data-concept="แบบที่ 6">
+              <span class="image-stage"><img src="assets/concept-6.jpg" alt="แบบที่ 6 ชุดแนวคิดโลโก้ 10 แบบจากภูมิทัศน์และเอกลักษณ์เชียงใหม่" /></span>
+              <div class="card-footer"><span><small>ชุดแนวคิด</small><strong>06</strong></span><div class="rank-controls" aria-label="จัดอันดับแบบที่ 6"><button type="button" class="rank-button" data-rank="1">ที่ 1</button><button type="button" class="rank-button" data-rank="2">ที่ 2</button><button type="button" class="rank-button" data-rank="3">ที่ 3</button></div></div>
+              <div class="card-comment"><textarea id="comment-6" data-comment-index="6" rows="3" maxlength="500" aria-label="ข้อเสนอแนะสำหรับแบบที่ 6" placeholder="อยากให้ปรับอะไรเพิ่มเติม?"></textarea><span class="card-comment-count">0 / 500</span></div>
+            </article>
+          </div>
+        </fieldset>
+
+        <div class="submit-bar">
+          <div class="selection-summary" aria-live="polite">
+            <span class="summary-number">0/3</span>
+            <span><small>อันดับของคุณ</small><strong id="selection-text">กรุณาเลือกให้ครบ 3 อันดับ</strong></span>
+          </div>
+          <button id="submit-button" type="submit" disabled>ส่งผลการจัดอันดับ</button>
+        </div>
+        <p id="form-status" class="form-status" role="alert" aria-live="assertive"></p>
+      </form>
+
+      <section id="success-panel" class="success-panel" aria-labelledby="success-title" hidden>
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <p class="eyebrow">บันทึกผลแล้ว</p>
+        <h2 id="success-title">ขอบคุณที่มีส่วนร่วมเลือกโลโก้ EPIC</h2>
+        <p id="success-detail">บันทึกผลการจัดอันดับโดยไม่ระบุตัวตนแล้ว</p>
+        <button id="reset-demo" type="button" class="secondary-button" hidden>เริ่มทดลองใหม่</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>แบบฟอร์มนี้ไม่ขอชื่อหรืออีเมล</p>
+      <p>EPIC · มหาวิทยาลัยเชียงใหม่</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
