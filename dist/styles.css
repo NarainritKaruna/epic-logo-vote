@@ -77,6 +77,13 @@ button, textarea { font: inherit; }
 
 .privacy-pill span { width: 8px; height: 8px; border-radius: 50%; background: #1e9d68; box-shadow: 0 0 0 4px #daf4e8; }
 
+.ballot-closed .privacy-pill span { background: #c77735; box-shadow: 0 0 0 4px #fbead7; }
+.ballot-closed .step-row,
+.ballot-closed .rank-controls,
+.ballot-closed .card-comment,
+.ballot-closed .submit-bar,
+.ballot-closed #form-status { display: none; }
+
 main { width: min(1280px, calc(100% - 40px)); margin: 0 auto; }
 
 .preview-banner {
