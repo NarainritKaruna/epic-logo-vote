@@ -4,6 +4,8 @@
  */
 
 const BALLOT_VERSION = 'epic-logo-2026-02-ranked';
+// Voting closed after 18 October 2026 in Bangkok (UTC+7).
+const BALLOT_CLOSE_UTC = Date.UTC(2026, 9, 18, 17, 0, 0);
 const SPREADSHEET_ID_KEY = 'EPIC_VOTES_SPREADSHEET_ID';
 const VOTES_SHEET = 'Votes';
 const RESULTS_SHEET = 'Results';
@@ -52,6 +54,7 @@ function doPost(event) {
   try {
     lock.waitLock(10000);
     locked = true;
+    if (Date.now() >= BALLOT_CLOSE_UTC) return response_('closed');
 
     const fields = (event && event.parameter) || {};
     const voterId = String(fields.voter_id || '').trim();
