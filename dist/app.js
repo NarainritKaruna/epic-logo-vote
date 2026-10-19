@@ -3,6 +3,7 @@ const VOTER_KEY = `epic-voter-${BALLOT_VERSION}`;
 const RECEIPT_KEY = `epic-vote-receipt-${BALLOT_VERSION}`;
 const PENDING_KEY = `epic-vote-pending-${BALLOT_VERSION}`;
 const endpoint = String(window.EPIC_VOTE_ENDPOINT || '').trim();
+const ballotIsClosed = true;
 
 const form = document.querySelector('#vote-form');
 const cards = [...document.querySelectorAll('.concept-card')];
@@ -230,6 +231,7 @@ async function verifyBallot(payload) {
 }
 
 async function submitVote(input) {
+  if (ballotIsClosed) throw new Error('Voting closed on 18 October 2026.');
   if (isUnconfiguredPublic) throw new Error('Voting is not configured.');
   if (localStorage.getItem(RECEIPT_KEY)) throw new Error('This browser already has a receipt.');
 
@@ -355,7 +357,7 @@ try {
 }
 renderRankings();
 
-if (document.modelContext?.registerTool) {
+if (!ballotIsClosed && document.modelContext?.registerTool) {
   const lifecycle = new AbortController();
   Promise.resolve(document.modelContext.registerTool({
     name: 'submit_ranked_anonymous_vote',
